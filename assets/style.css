@@ -1,0 +1,30 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+* {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 2rem auto auto auto;
+    width: 90%;
+}
+
+p {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+.column {
+    border: 1px black solid;
+    border-radius: 5px;
+    margin: .5rem;
+}
+
+.button {
+    margin-top: .5rem;
+}
