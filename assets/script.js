@@ -2,6 +2,8 @@ const clientId = '07745df9262c4de48f0f8d25213b10a3';
 const clientSecret = 'c7e3a9d7bfad4498af076f0ca496f6e7';
 const encodedCredentials = btoa(`${clientId}:${clientSecret}`);
 lyricContainer = document.getElementById("lyrics")
+var queryEl = document.getElementById("query")
+var search = document.getElementById("searchBtn")
 var query = "mother";
 var player = document.getElementById("player")
 
@@ -78,4 +80,13 @@ getLyrics = function(title,artist){
       });
     
 }
+
+var formSubmitHandler = function (event) {
+  event.preventDefault();
+  query = queryEl.value.trim()
   init()
+}
+
+
+  init()
+  search.addEventListener("click", formSubmitHandler)
