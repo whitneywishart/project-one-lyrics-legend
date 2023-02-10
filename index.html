@@ -1,25 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="frame-src *">
-    <title>Document</title>
+    <title>Lyrics Legend</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/assets/style.css">
 </head>
+
 <body>
-    <iframe id="player" width="100%" height="152" title="Spotify Embed: My Path to Spotify: Women in Engineering" style="border-radius: 12px frameborder=0" allowfullscreen allow=autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture src="https:open.spotify.com/embed/episode/7makk4oTQel546B0PZlDM5?utm_source=oembed"></iframe>
-    <div>
-        <button id ='addBtn'>Add Song To Playlist</button>
-        <button id ='savePlaylist'>Save Playlist</button>
-        <input type = 'text' id = 'inputSong'>
-        <p id = 'addedOrNot'></p>
-        <p id="lyrics"></p>
+    <div class="columns">
+        <!-- Top row -->
+        <!-- Title container -->
+        <div class="column is-one-third">
+            <h1>Lyrics Legend</h1>
+        </div>
+        <!-- Player widget container -->
+        <div class="column"><iframe id="player" width="100%" height="152"
+                title="Spotify Embed: My Path to Spotify: Women in Engineering"
+                style="border-radius: 12px frameborder=0" allowfullscreen allow=autoplay; clipboard-write;
+                encrypted-media; fullscreen; picture-in-picture
+                src="https:open.spotify.com/embed/episode/7makk4oTQel546B0PZlDM5?utm_source=oembed"></iframe></div>
     </div>
-    <div class = 'songDisplay'>
-    </div>
-    <div class = 'playlistsDisplay'>
-    </div>
-    <script src="./assets/script.js"></script>
+    <!-- Second row -->
+    <div class="columns">
+        <div class="column is-one-third">
+            <!-- Search container -->
+            <div class="field has-addons">
+                <div class="control">
+                    <input class="input" type="text" placeholder="Search for a song">
+                </div>
+                <div class="control">
+                    <a class="button is-info">
+                        Search
+                    </a>
+                </div>
+            </div>
+            <!-- Playlist container -->
+            <h2>Saved playlist</h2>
+            <ul>
+                <li>Saved song</li>
+                <li>Saved song</li>
+                <li>Saved song</li>
+                <li>Saved song</li>
+                <li>Saved song</li>
+            </ul>
+
+        </div>
+
+        <div class="column">
+            <h3>Lyrics</h3>
+        </div>
+
+
+        <script src="./assets/script.js"></script>
 </body>
+
 </html>
