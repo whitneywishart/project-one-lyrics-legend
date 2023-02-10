@@ -10,5 +10,5 @@ No installation required.
 https://whitneywishart.github.io/project-one-lyrics-legend
 
 ## Screenshot
-<img src="./assets/images/screenshot.png" width="650">
+<img src="./assets/screenshot.png" width="650">
 
