@@ -68,6 +68,7 @@ getLyrics = function(title,artist){
             console.log(lyric);
             if (lyric){
                 lyricContainer.textContent = lyric
+                lyricFormat()
             } else {
                 lyricContainer.textContent = "No Lyrics Found"
             }
@@ -86,6 +87,12 @@ var formSubmitHandler = function (event) {
   query = queryEl.value.trim()
   init()
 }
+var lyricFormat = function (){
+  var replace = /\W+(?=[A-Z][a-z])/g;
+  var text = document.getElementById("lyrics").innerHTML;
+  text = text.replace(replace, '$&<br>');
+  console.log(text)
+}
 
 
   init()
@@ -93,6 +100,3 @@ var formSubmitHandler = function (event) {
 
 //Add line breaks at each upper case lyric
 //This works when I add text directly to the html file
-var replace = /\W+(?=[A-Z][a-z])/g;
-var text = document.getElementById("lyrics").innerHTML;
-console.log(text.replace(replace, '$&\n'));
