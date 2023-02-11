@@ -90,3 +90,9 @@ var formSubmitHandler = function (event) {
 
   init()
   search.addEventListener("click", formSubmitHandler)
+
+//Add line breaks at each upper case lyric
+//This works when I add text directly to the html file
+var replace = /\W+(?=[A-Z][a-z])/g;
+var text = document.getElementById("lyrics").innerHTML;
+console.log(text.replace(replace, '$&\n'));
