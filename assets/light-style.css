@@ -5,7 +5,7 @@
 }
 
 html {
-    background: #050910;
+    background: #fff;
 }
 
 body {
@@ -17,26 +17,30 @@ body {
 .column {
     border-radius: 5px;
     margin: .5rem;
-    background: linear-gradient(0deg, #050910 0%, #0a131f 85%);
+    background: linear-gradient(0deg, #fff 0%, #e0e0e0 85%);
 }
-
 
 p {
     font-size: 16px;
 }
 
-h1 {
+#toggleMode {
     font-size: 4rem;
     font-weight: 700;
     background: -webkit-radial-gradient(30% 50%, circle closest-corner, #BBB193, #7EA8BE, #C2948A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    border: none;
 }
+#toggleMode{
+    cursor: pointer;
+}
+
 
 h2 {
     font-size: 2rem;
     font-weight: 700;
-    background: -webkit-radial-gradient(30% 60%, circle closest-corner, #7EA8BE, #C2948A);
+    background: -webkit-radial-gradient(30% 60%, circle closest-corner, #7EA8BE, #242424);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -44,35 +48,35 @@ h2 {
 h3 {
     font-size: 1.5rem;
     font-weight: 700;
-    background: -webkit-radial-gradient(30% 60%, circle closest-corner, #7EA8BE, #BBB193);
+    background: -webkit-radial-gradient(30% 60%, circle closest-corner, #7EA8BE, #242424);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* add song button */
 #songAddBtn{
-    color: #C2948A;
+    color: #14253E;
  }
  /* song buttons*/
  ul button{
     display: flex;
     flex-direction: column;
-    color: #C2948A;
+    color: #14253E;
  }
  /* clear songs button */
  #clearBtn{
-    color: #C2948A;
+    color: #14253E;
  }
  
 #lyrics {
-    color: #bbb193;
+    color: #14253E;
 }
 
 
 /* Search input and button */
 .button.is-info {
     background-color: #14253E;
-    color: #E9D2CA;
+    color: #fff;
 }
 
 .button.is-info:hover {
@@ -86,6 +90,49 @@ h3 {
 }
 
 .input::placeholder {
-    color: #BBB193;
+    color: #fff;
     opacity: .6;
+}
+
+.songContainer button{
+    background-color: #1F3A61;
+    border-radius: 10px;
+    margin: 20px 0px;
+    padding: 4px 20px;
+    font-size: 15px;
+    color: #fff;
+    border: none;
+}
+
+.songContainer button:hover{
+    background-color: #7EA8BE;
+    cursor: pointer;
+}
+
+#clearBtn{
+    background: #1F3A61;
+    font-size: 15px;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#clearBtn:hover{
+    background-color: #7EA8BE;
+    cursor: pointer;
+}
+
+#songAddBtn{
+    background-color: #1F3A61;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #fff;
+    padding: 10px;
+    border: none;
+}
+
+#songAddBtn:hover{
+    background-color: #7EA8BE;
+    cursor: pointer;
 }

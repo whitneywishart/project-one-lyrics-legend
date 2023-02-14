@@ -31,6 +31,7 @@ fetch('https://accounts.spotify.com/api/token', {
     })
       .then(response => response.json())
       .then(data => {
+        console.log(data)
         console.log(data.tracks.items);
         playSong(data.tracks.items)
       })
@@ -154,3 +155,12 @@ queryEl.addEventListener("keyup", (event) => {
   songHistory()
  })
  
+  var cssStyle = document.getElementById('styling')
+  document.getElementById('toggleMode').addEventListener('click', function(){
+    if(cssStyle.href.includes('dark-style')){
+      cssStyle.href = './assets/light-style.css';
+    }else{
+      cssStyle.href = './assets/dark-style.css';
+    }
+  });
+  
