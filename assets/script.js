@@ -100,3 +100,57 @@ var lyricFormat = function (){
 
 //Add line breaks at each upper case lyric
 //This works when I add text directly to the html file
+queryEl.addEventListener("keyup", (event) => {
+  if (event.keyCode === 13) {
+    search.click()
+  }
+ });
+ 
+ 
+ var songContainer = document.querySelector('.songContainer');
+ 
+ 
+ function songHistoryOnStartup(){
+  songList = JSON.parse(localStorage.getItem('songNames')) || []
+  for(i = 0; i < songList.length; i++){
+    songItem = document.createElement('button');
+    songItem.textContent = songList[i];
+    songContainer.append(songItem);
+  }
+ }
+ songHistoryOnStartup()
+ 
+ 
+ function songHistory(){
+  songList = JSON.parse(localStorage.getItem('songNames')) || [];
+  if(!songList.includes(query)){
+    songList.push(query);
+    localStorage.setItem('songNames',JSON.stringify(songList));
+  }
+  songContainer.innerHTML = '';
+  for(i = 0; i < songList.length; i++){
+    songItem = document.createElement('button');
+    songItem.textContent = songList[i];
+    songContainer.append(songItem);
+  }
+ }
+ 
+ 
+ document.querySelector('.songContainer').addEventListener('click', () => {
+  if (event.target.id !== 'emptyCheck'){
+    queryEl.value = (event.target.textContent)
+          search.click();
+  }
+ })
+ 
+ 
+ document.getElementById('clearBtn').addEventListener('click', () => {
+  localStorage.clear();
+  songContainer.innerHTML = ''
+ })
+ 
+ 
+ document.getElementById('songAddBtn').addEventListener('click', () => {
+  songHistory()
+ })
+ 

@@ -49,10 +49,21 @@ h3 {
     -webkit-text-fill-color: transparent;
 }
 
-ul {
+/* add song button */
+#songAddBtn{
     color: #C2948A;
-}
-
+ }
+ /* song buttons*/
+ ul button{
+    display: flex;
+    flex-direction: column;
+    color: #C2948A;
+ }
+ /* clear songs button */
+ #clearBtn{
+    color: #C2948A;
+ }
+ 
 #lyrics {
     color: #bbb193;
 }
