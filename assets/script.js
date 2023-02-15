@@ -99,8 +99,7 @@ var lyricFormat = function (){
   init()
   search.addEventListener("click", formSubmitHandler)
 
-//Add line breaks at each upper case lyric
-//This works when I add text directly to the html file
+
 queryEl.addEventListener("keyup", (event) => {
   if (event.keyCode === 13) {
     search.click()

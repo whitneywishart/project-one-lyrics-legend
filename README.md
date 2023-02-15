@@ -1,9 +1,9 @@
 # Project One: Lyrics Legend
-## A browser app to search for songs, listen and display lyrics.
+## A browser app to search for songs and display lyrics.
 <br/>
 
 ## What
-A standalone music player for the browser that displays current song lyrics while you listen. 
+A standalone music player for the browser that displays current song lyrics.
 
 No installation required.
 <br/><br/>
