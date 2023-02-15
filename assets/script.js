@@ -121,7 +121,6 @@ queryEl.addEventListener("keyup", (event) => {
  }
  songHistoryOnStartup()
  
- 
  function songHistory(){
   songList = JSON.parse(localStorage.getItem('songNames')) || [];
   if(!songList.includes(query)){
@@ -134,7 +133,7 @@ queryEl.addEventListener("keyup", (event) => {
     songItem.textContent = songList[i];
     songContainer.append(songItem);
   }
- }
+}
  
  
  document.querySelector('.songContainer').addEventListener('click', () => {

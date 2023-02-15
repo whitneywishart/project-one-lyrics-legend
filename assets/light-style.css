@@ -11,6 +11,7 @@ html {
 body {
     margin: 2rem auto auto auto;
     width: 90%;
+    background: #fff;
 }
 
 /* Column container gradient */
@@ -27,7 +28,7 @@ p {
 #toggleMode {
     font-size: 4rem;
     font-weight: 700;
-    background: -webkit-radial-gradient(30% 50%, circle closest-corner, #BBB193, #7EA8BE, #C2948A);
+    background: -webkit-radial-gradient(30% 50%, circle closest-corner, #1F3A61, #7EA8BE, #242424);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: none;
@@ -53,21 +54,6 @@ h3 {
     -webkit-text-fill-color: transparent;
 }
 
-/* add song button */
-#songAddBtn{
-    color: #14253E;
- }
- /* song buttons*/
- ul button{
-    display: flex;
-    flex-direction: column;
-    color: #14253E;
- }
- /* clear songs button */
- #clearBtn{
-    color: #14253E;
- }
- 
 #lyrics {
     color: #14253E;
 }
@@ -94,6 +80,11 @@ h3 {
     opacity: .6;
 }
 
+ul button{
+    display: flex;
+    flex-direction: column;
+}
+ 
 .songContainer button{
     background-color: #1F3A61;
     border-radius: 10px;
@@ -130,6 +121,7 @@ h3 {
     color: #fff;
     padding: 10px;
     border: none;
+    margin-left: 10px;
 }
 
 #songAddBtn:hover{
