@@ -1,130 +1,200 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
-#lyrics{
-    white-space: pre-wrap
+#lyrics {
+  white-space: pre-wrap;
 }
 
 html {
-    background: #fff;
+  background: #fff;
 }
 
 body {
-    margin: 2rem auto auto auto;
-    width: 90%;
-    background: #fff;
+  margin: 2rem auto auto auto;
+  width: 90%;
+  background: #fff;
 }
 
 /* Column container gradient */
 .column {
-    border-radius: 5px;
-    margin: .5rem;
-    background: linear-gradient(0deg, #fff 0%, #e0e0e0 85%);
+  border-radius: 5px;
+  margin: 0.5rem;
+  background: linear-gradient(0deg, #fff 0%, #e0e0e0 85%);
 }
 
 p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 #toggleMode {
-    font-size: 4rem;
-    font-weight: 700;
-    background: -webkit-radial-gradient(30% 50%, circle closest-corner, #1F3A61, #7EA8BE, #242424);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border: none;
-}
-#toggleMode{
-    cursor: pointer;
+  font-size: 4rem;
+  font-weight: 700;
+  background: -webkit-radial-gradient(
+    30% 50%,
+    circle closest-corner,
+    #1f3a61,
+    #7ea8be,
+    #242424
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: none;
+
+  /* animation, 3D transform settings */
+  text-align: left;
+  animation-name: spin, depth;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+  transform-style: preserve-3d;
+  position: relative;
 }
 
+#togglemode::before,
+#togglemode::after {
+  content: "Lyrics Legend";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: rotateY(0.5deg);
+  transform-origin: 0 50%;
+}
+#togglemode::after {
+  transform: rotateY(-0.5deg);
+  transform-origin: 100% 50%;
+}
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+@keyframes depth {
+  10% {
+    text-shadow: 0 0 rgb(182, 24, 24);
+  }
+  25% {
+    text-shadow: 1px 0 rgb(232, 63, 63), 2px 0 #652222, 3px 0 rgb(153, 11, 11),
+      4px 0 rgb(55, 92, 170), 5px 0 rgb(59, 66, 156), 6px 0 rgb(50, 109, 237);
+  }
+  50% {
+    text-shadow: 1px 0 black, 2px 0 rgb(131, 51, 51), 3px 0 rgb(153, 11, 11),
+      4px 0 rgb(68, 106, 194), 5px 0 rgb(33, 91, 215), 6px 0 rgb(50, 109, 237);
+  }
+  75% {
+    text-shadow: -1px 0 rgb(117, 84, 105), -2px 0 rgb(149, 59, 136),
+      -3px 0 rgb(196, 32, 149), -4px 0 rgb(247, 6, 227), -5px 0 rgb(61, 194, 89),
+      -6px 0 rgb(144, 216, 21);
+  }
+  100% {
+    text-shadow: 0 0 rgb(182, 24, 24);
+  }
+}
+/* end animation, 3D transform */
+
+#toggleMode {
+  cursor: pointer;
+}
 
 h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    background: -webkit-radial-gradient(30% 60%, circle closest-corner, #7EA8BE, #242424);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  font-weight: 700;
+  background: -webkit-radial-gradient(
+    30% 60%,
+    circle closest-corner,
+    #7ea8be,
+    #242424
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    background: -webkit-radial-gradient(30% 60%, circle closest-corner, #7EA8BE, #242424);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: -webkit-radial-gradient(
+    30% 60%,
+    circle closest-corner,
+    #7ea8be,
+    #242424
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #lyrics {
-    color: #14253E;
+  color: #14253e;
 }
-
 
 /* Search input and button */
 .button.is-info {
-    background-color: #14253E;
-    color: #fff;
+  background-color: #14253e;
+  color: #fff;
 }
 
 .button.is-info:hover {
-    background-color: #7EA8BE;
+  background-color: #7ea8be;
 }
 
 .input {
-    background-color: #1F3A61;
-    border: #0f1c2f;
-    color: #F6F0ED;
+  background-color: #1f3a61;
+  border: #0f1c2f;
+  color: #f6f0ed;
 }
 
 .input::placeholder {
-    color: #fff;
-    opacity: .6;
+  color: #fff;
+  opacity: 0.6;
 }
 
-ul button{
-    display: flex;
-    flex-direction: column;
-}
- 
-.songContainer button{
-    background-color: #1F3A61;
-    border-radius: 10px;
-    margin: 20px 0px;
-    padding: 4px 20px;
-    font-size: 15px;
-    color: #fff;
-    border: none;
+ul button {
+  display: flex;
+  flex-direction: column;
 }
 
-.songContainer button:hover{
-    background-color: #7EA8BE;
-    cursor: pointer;
+.songContainer button {
+  background-color: #1f3a61;
+  border-radius: 10px;
+  margin: 20px 0px;
+  padding: 4px 20px;
+  font-size: 15px;
+  color: #fff;
+  border: none;
 }
 
-#clearBtn{
-    background: #1F3A61;
-    font-size: 15px;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+.songContainer button:hover {
+  background-color: #7ea8be;
+  cursor: pointer;
 }
 
-#clearBtn:hover{
-    background-color: #7EA8BE;
-    cursor: pointer;
+#clearBtn {
+  background: #1f3a61;
+  font-size: 15px;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
 }
 
-#songAddBtn{
-    background-color: #1F3A61;
-    border-radius: 5px;
-    font-size: 15px;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    margin-left: 10px;
+#clearBtn:hover {
+  background-color: #7ea8be;
+  cursor: pointer;
 }
 
-#songAddBtn:hover{
-    background-color: #7EA8BE;
-    cursor: pointer;
+#songAddBtn {
+  background-color: #1f3a61;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  margin-left: 10px;
+}
+
+#songAddBtn:hover {
+  background-color: #7ea8be;
+  cursor: pointer;
 }
